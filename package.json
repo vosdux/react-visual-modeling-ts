@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/vosdux"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react-visual-modeling-ts",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/vosdux"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "react-visual-modeling-ts",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -28,7 +28,7 @@
   "peerDependencies": {
     "lodash": "^4.17.20",
     "react": ">15.6.1, <18.0.0",
-    "react-dom": ">15.6.1, <17.0.0"
+    "react-dom": ">15.6.1, <18.0.0"
   },
   "devDependencies": {
     "@babel/core": "~7.12.0",

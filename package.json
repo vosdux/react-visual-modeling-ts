@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/vosdux"
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "react-visual-modeling-ts",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c && cp -r ./src/static ./dist && cp -r ./src/static ./pack",
+    "build": "rollup -c && cp -r ./src/static ./dist",
     "dev": "rollup -w -c",
     "prepublishOnly": "npm run build",
     "start": "cd example && npm start"

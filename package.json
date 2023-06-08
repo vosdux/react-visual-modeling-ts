@@ -27,8 +27,8 @@
   },
   "peerDependencies": {
     "lodash": "^4.17.20",
-    "react": ">15.6.1, <17.0.2",
-    "react-dom": ">15.6.1, <17.0.2"
+    "react": ">15.6.1, <18.0.0",
+    "react-dom": ">15.6.1, <17.0.0"
   },
   "devDependencies": {
     "@babel/core": "~7.12.0",

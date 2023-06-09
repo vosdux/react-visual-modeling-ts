@@ -1,10 +1,7 @@
 {
   "name": "@vosdux/react-visual-modeling-ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/vosdux"
-  },
-  "version": "0.0.7",
-  "description": "react-visual-modeling-ts",
+  "version": "1.0.0",
+  "description": "Адаптация библиотеки react-visual-modeling под React 17.0.2 + typescript",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +16,7 @@
     "start": "cd example && npm start"
   },
   "author": "Artem Karpukhov",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "butterfly-dag": "^4.0.2",
     "jquery": "^3.5.1",

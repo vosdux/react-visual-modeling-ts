@@ -178,7 +178,10 @@ export default class TableNode extends Node {
         });
       }
     });
-    titleIcon.append(collapseIcon);
+    let disableCollapse = _.get(this, 'options._config.disableCollapse');
+    if (!disableCollapse) {
+      titleIcon.append(collapseIcon);
+    }
     // 删除icon
     let deleteIcon = $('<i class="table-build-icon table-build-icon-canvas-cuo"></i>');
     deleteIcon.on('click', (e) => {
@@ -186,7 +189,10 @@ export default class TableNode extends Node {
         node: this
       });
     });
-    titleIcon.append(deleteIcon);
+    let isReadOnlyNode = _.get(this, 'options._config.isReadOnlyNode');
+    if (!isReadOnlyNode) {
+      titleIcon.append(deleteIcon);
+    }
     let extIcon = $('<span class="title-ext-icon"></span>');
     let titleIconRender = _.get(this, 'options._config.titleExtIconRender');
     if (titleIconRender) {

@@ -6,23 +6,26 @@ class NewEndPoint extends Endpoint {
     super(opts);
   }
   attachEvent() {
-    $(this.dom).on('mousedown', (e) => {
-      const LEFT_KEY = 0;
-      if (e.button !== LEFT_KEY) {
-        return;
-      }
-      e.preventDefault();
-      e.stopPropagation();
-      if (this.options._isNodeSelf) {
-        this.emit('custom.endpoint.dragNode', {
-          data: this
+    let disableEdgeCreation = _.get(this, 'options._config.disableEdgeCreation');
+    if (!disableEdgeCreation) {
+      $(this.dom).on('mousedown', (e) => {
+        const LEFT_KEY = 0;
+        if (e.button !== LEFT_KEY) {
+          return;
+        }
+        e.preventDefault();
+        e.stopPropagation();
+        if (this.options._isNodeSelf) {
+          this.emit('custom.endpoint.dragNode', {
+            data: this
+          });
+        }
+        this.emit('custom.endpoint.focus', {
+          point: this
         });
-      }
-      this.emit('custom.endpoint.focus', {
-        point: this
       });
-    });
-
+    }
+    
     // todo: 高亮整条链路
     if (this.options._isNodeSelf) {
       $(this.dom).on('mouseover', (e) => {

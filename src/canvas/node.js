@@ -189,8 +189,8 @@ export default class TableNode extends Node {
         node: this
       });
     });
-    let isReadOnlyNode = _.get(this, 'options._config.isReadOnlyNode');
-    if (!isReadOnlyNode) {
+    let disableDeleting = _.get(this, 'options._config.disableDeleting');
+    if (!disableDeleting) {
       titleIcon.append(deleteIcon);
     }
     let extIcon = $('<span class="title-ext-icon"></span>');

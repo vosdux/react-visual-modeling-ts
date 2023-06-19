@@ -6,7 +6,9 @@ class NewEndPoint extends Endpoint {
     super(opts);
   }
   attachEvent() {
-    let disableEdgeCreation = _.get(this, 'options._config.disableEdgeCreation');
+    console.log(this.options, 'options')
+    let disableEdgeCreation = _.get(this, '_node.options._config.disableEdgeCreation');
+    console.log(disableEdgeCreation, 'disableEdgeCreation');
     if (!disableEdgeCreation) {
       $(this.dom).on('mousedown', (e) => {
         const LEFT_KEY = 0;

@@ -6,10 +6,12 @@ import Tooltip from './tooltip/index';
 
 export interface action {
   key: string,                                      // 唯一表示
-  icon: string | JSX.Element,                       // 图标
+  icon?: string | JSX.Element,                       // 图标
   title?: string;                                   // 提示
-  onClick: (canvas: any) => void;                   // 点击响应函数
-  disable: boolean;                                 // 是否禁用
+  onClick?: (canvas: any) => void;                   // 点击响应函数
+  disable?: boolean;                                // 是否禁用
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 interface IProps {
@@ -81,7 +83,9 @@ const ActionMenu = (props: IProps) => {
             <div 
               key={action.key} 
               title={action.title}
+              className={action.className}
               onClick={() => action.onClick(canvas)}
+              style={action.style}
             >
               <Tooltip title={action.title}>
                 {renderIcon(action.icon)}

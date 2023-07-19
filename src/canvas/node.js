@@ -24,7 +24,7 @@ export default class TableNode extends Node {
     if (!_dom) {
       _dom = $('<div></div>')
         .attr('class', 'node table-node')
-        .attr('id', obj.name);
+        .attr('id', obj.id);
     }
     const node = $(_dom);
     // 计算节点坐标
@@ -137,7 +137,7 @@ export default class TableNode extends Node {
         newEdges.push(newEdgeObj);
       }
     });
-
+  
     return newEdges;
   }
   _createTableTitle(container = this.dom) {

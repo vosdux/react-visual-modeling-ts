@@ -66,7 +66,7 @@ interface config {
       circleColor: string; // Цвет круга
     };
   };
-  // butterfly?: any;                                // Конфигурация холста：https://github.com/alibaba/butterfly/blob/dev/v4/docs/zh-CN/canvas.md
+  butterfly?: any;                                // Конфигурация холста：https://github.com/alibaba/butterfly/blob/dev/v4/docs/zh-CN/canvas.md
 }
 
 // Менюшки
@@ -160,7 +160,7 @@ export default class TableBuilding extends React.Component<ComProps, any> {
         // 默认配置
         bfCfg,
         // 用户配置
-        // (config.butterfly || {}),
+        (config.butterfly || {}),
         // 固定配置
         {
           root,

@@ -22,8 +22,9 @@ export default class TableNode extends Node {
   draw(obj) {
     let _dom = obj.dom;
     if (!_dom) {
+      const className = _.get(this, 'options.className');
       _dom = $('<div></div>')
-        .attr('class', 'node table-node')
+        .attr('class', `node table-node ${className || ''}`)
         .attr('id', obj.id);
     }
     const node = $(_dom);

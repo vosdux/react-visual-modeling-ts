@@ -4,8 +4,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import ButterflyDataMapping from 'react-data-mapping';
 import 'react-data-mapping/dist/index.css';
-
-const Tips = require('butterfly-dag').Tips;
+import { Tips } from 'butterfly-dag';
 
 let _genTipDom = (result) => {
   let dom = $('<div class="menu-container"></div>');

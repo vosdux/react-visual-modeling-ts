@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import * as ReactDOM from 'react-dom';
-
-const Tips = require('butterfly-dag').Tips;
+import { Tips } from 'butterfly-dag';
 
 let _genTipDom = (menuData, data) => {
   let dom = $('<div class="menu-container"></div>');
